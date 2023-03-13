@@ -25,7 +25,7 @@ export default function Home() {
           Our website is coming soon!
         </h1>
         <p className="mt-8 text-2xl">
-          We're working hard to create an awesome experience for you.
+          We are working hard to create an awesome experience for you.
         </p>
         <div className="mt-8 space-x-4">
           <input
