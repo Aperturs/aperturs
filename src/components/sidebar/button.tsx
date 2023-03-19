@@ -8,7 +8,11 @@ interface SideBarButtonProps {
 
 const SideBarButton: FC<SideBarButtonProps> = ({ onClick, icon, text }) => {
   return (
-    <button className='btn w-44 shadow-md rounded-md bg-purple-200 flex align-middle justify-start pl-3 h-10 pt-2' onClick={onClick}>
+    <button className='btn w-48 rounded-lg bg-[#F4F3FF] 
+    flex items-center justify-start pl-3 h-12 hover:bg-[#e3f2ff] hover:shadow-sm
+    text-lg
+    ' 
+    onClick={onClick}>
       {icon}
       {text}
     </button>
