@@ -1,10 +1,7 @@
-import { NextResponse,NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 
-const Middleware = (req: NextRequest) => {
-  if (req.nextUrl.pathname === req.nextUrl.pathname.toLowerCase())
-    return NextResponse.next();
-
-  return NextResponse.redirect(new URL(req.nextUrl.origin + req.nextUrl.pathname.toLowerCase()));
-};
-
-export default Middleware;
+export function middleware(request: NextRequest) {
+   if (request.nextUrl.pathname === request.nextUrl.pathname.toLocaleLowerCase())
+       return NextResponse.next();
+   return NextResponse.redirect(`${request.nextUrl.origin}${request.nextUrl.pathname.toLocaleLowerCase()}${request.nextUrl.search}`);
+}
